@@ -1,12 +1,8 @@
-import yfinance as yf
+from abc import ABC, abstractmethod
 from datetime import datetime
+from typing import Optional
 
-def fetch_price_yfinance(symbol: str) -> dict:
-    ticker = yf.Ticker(symbol)
-    price = ticker.info.get("regularMarketPrice")
-    return {
-        "symbol": symbol,
-        "price": price,
-        "timestamp": datetime.utcnow().isoformat(),
-        "provider": "yfinance"
-    }
+class MarketDataProvider(ABC):
+    @abstractmethod
+    async def get_latest_price(self, symbol: str) -> Optional[dict]:
+        pass
