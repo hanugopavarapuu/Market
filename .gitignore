@@ -1,0 +1,51 @@
+.env
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment folder
+venv/
+env/
+.venv/
+
+# Environment variable files
+.env
+
+# IDE/editor folders
+.vscode/
+.idea/
+*.swp
+
+# Logs
+*.log
+
+# Docker files
+docker-compose.override.yml
+docker-compose.override.yaml
+
+# MacOS files
+.DS_Store
+
+# Pytest cache
+.pytest_cache/
+
+# Mypy cache
+.mypy_cache/
+
+# Coverage reports
+htmlcov/
+.coverage
+
+# SQLite DB (if used locally)
+*.sqlite3
+
+# Build / dist folders
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Ignore migrations if you want (optional)
+# migrations/
+
